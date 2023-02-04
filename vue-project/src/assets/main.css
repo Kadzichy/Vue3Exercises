@@ -8,3 +8,12 @@
   text-align: center;
 }
 
+.inline-link-3 {
+  display: inline-block;
+  position: relative;
+  padding-left: 20px;
+  font-size: 40px;
+  text-decoration: none;
+  color: #e6177e;
+  
+}
