@@ -2,28 +2,26 @@
 export default{
 data(){
   return{
-    cost: '1',
-    amount: '2',
-  }
-},
-computed: {
-  price: function(){
-    return this.cost * this.amount;
+    num1: 1,
+    num2: 2,
+    text: 'Sum'
   }
 },
 methods: {
-change: function(){
-  this.cost = '3'
-}
+  show: function(){
+    let text = this.cape(this.text)
+    alert(this.num1 + this.num2);
+  },
+  cape: function(str){
+    return str[0].toUpperCase() + str.slice(1);
+  }
 }
 }
 </script>
 
 <template>
-<p class="one">{{ cost }}</p>
-<p class="one">{{ amount }}</p>
-<p class="one">{{ price }}</p>
-<button class="button" @click="change">cost</button>
+<a class="inline-link-3" href="https://www.youtube.com/" onclick="event.preventDefault()">Link</a>
+<button class="button" @click.once="show">click</button>
 </template>
 
 <style scoped>
