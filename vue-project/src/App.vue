@@ -1,13 +1,20 @@
 <script>
 export default{
-name: 'App',
+data(){
+  return{
+    name: 'Oleg',
+    surname: 'Tinkoff',
+  }
+}
 }
 </script>
 
 <template>
-  <div class="one"> Some text
+  <div class="one">{{ name }}
+  </div>
+  <div class="one">{{ surname }}
   </div>
 </template>
 
-<style>
+<style scoped>
 </style>
