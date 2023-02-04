@@ -12,8 +12,7 @@ methods: {
 </script>
 
 <template>
-  <button @click="show" class="button"> Date 
-  </button>
+<button class="button" v-on:mouseover="show">Data</button>
 </template>
 
 <style scoped>
