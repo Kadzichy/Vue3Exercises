@@ -2,26 +2,29 @@
 export default{
 data(){
   return{
-    num1: 1,
-    num2: 2,
-    text: 'Sum'
+    date: '1'
   }
 },
 methods: {
   show: function(){
-    let text = this.cape(this.text)
-    alert(this.num1 + this.num2);
+    let date = this.dayOfWeek(this.date);
+    const dayOfWeekDigit = new Date().getDay();
+    let days = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье']
+    alert(date);
   },
-  cape: function(str){
-    return str[0].toUpperCase() + str.slice(1);
-  }
+  dayOfWeek: function(date){
+    let days = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье']
+    return days[date];
+  },
 }
 }
 </script>
 
 <template>
-<button class="button" v-on:mouseover="show">Sum</button>
+<button class="button" @click="show">Day</button>
+{{ dayOfWeekDigit }}
 </template>
 
 <style scoped>
+
 </style>
