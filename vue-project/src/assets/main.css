@@ -17,3 +17,14 @@
   color: #e6177e;
   
 }
+.button {
+  background-color: #008cff;
+  color: white;
+  padding: 20px 40px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 40px;
+  margin: 400px 850px;
+  cursor: pointer;
+  border-radius: 40px;
+}
