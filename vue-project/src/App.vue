@@ -2,29 +2,23 @@
 export default{
 data(){
   return{
-    date: '1'
   }
 },
 methods: {
-  show: function(){
-    let date = this.dayOfWeek(this.date);
-    const dayOfWeekDigit = new Date().getDay();
-    let days = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье']
-    alert(date);
+  show: function(str){
+  alert(str*str);
   },
-  dayOfWeek: function(date){
-    let days = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье']
-    return days[date];
-  },
+  show1: function(str1){
+    alert(str1*str1)
+  }
 }
 }
 </script>
 
 <template>
-<button class="button" @click="show">Day</button>
-{{ dayOfWeekDigit }}
+<button class="button" @click="show(2)">2^2</button>
+<button class="button" @click="show1(3)">3^2</button>
 </template>
 
 <style scoped>
-
 </style>
