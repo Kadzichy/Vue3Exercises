@@ -3,30 +3,32 @@ export default{
 data(){
   return{
     visible: true,
-btnHide: true,
-btnVis: false,
+    visible2: true,
+    visible3: true,
   }
 },
 methods: {
-  hide: function(){
-    this.visible = false;
-    this.btnHide = false;
-    this.btnVis = true;
+  toggle: function(){
+    this.visible = !this.visible;
   },
-  vis: function(){
-    this.visible = true;
-    this.btnHide = true;
-    this.btnVis = false;
+  toggle2: function () {
+    this.visible2 = !this.visible2;
+  },
+  toggle3: function () {
+    this.visible3 = !this.visible3;
   }
 }
 }
 </script>
 
 <template>
-<div class="one" v-if="hidden1">Oleg</div>
-<div class="one" v-if="!hidden2">Tinkoff</div>
-<button class="button" @click="hide" v-if="btnHide">hide</button>
-<button class="button" @click="vis" v-if="btnVis">visible</button>
+<button class="button" @click="toggle">What</button>
+<div class="one" v-if="visible">Oleg</div>
+<button class="button" @click="toggle2">you</button>
+<div class="one" v-if="visible2">Tinkoff</div>
+<button class="button" @click="toggle3">say</button>
+<div class="one" v-if="visible3">Bank</div>
+
 
 </template>
 
