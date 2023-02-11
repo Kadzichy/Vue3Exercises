@@ -2,6 +2,7 @@
 export default{
 data(){
   return{
+    arr: [1, -2, 3, -4, 5],
   }
 },
 methods: {
@@ -10,7 +11,11 @@ methods: {
 </script>
 
 <template>
-  <div class="one" v-for="num in 30"> {{ num }} </div>
+  <ul class="one">
+    <template v-for="elem in arr">
+    <li v-if="elem > 0 ">{{ elem }}</li>
+    </template>
+  </ul>
 </template>
 
 <style scoped>
