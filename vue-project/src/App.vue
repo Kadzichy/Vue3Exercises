@@ -23,11 +23,11 @@ methods: {
 
 <template>
 <button class="button" @click="toggle">What</button>
-<div class="one" v-if="visible">Oleg</div>
+<div class="one">{{visible ? 'Oleg' : 'tinkoff'}}</div>
 <button class="button" @click="toggle2">you</button>
-<div class="one" v-if="visible2">Tinkoff</div>
+<div class="one">{{visible2 ? 'Yes' : 'No'}}</div>
 <button class="button" @click="toggle3">say</button>
-<div class="one" v-if="visible3">Bank</div>
+<div class="one" >{{visible3 ? 'Oleg' : 'Gazmanov'}}</div>
 
 
 </template>
