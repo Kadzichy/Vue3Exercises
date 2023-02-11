@@ -2,7 +2,20 @@
 export default{
 data(){
   return{
-    arr: [1, -2, 3, -4, 5],
+    products: [
+      {
+        id: 1,
+        name: 'product1',
+      },
+      {
+        id: 2,
+        name: 'product2',
+      },
+      {
+        id: 3,
+        name: 'product3',
+      },
+    ]
   }
 },
 methods: {
@@ -11,10 +24,8 @@ methods: {
 </script>
 
 <template>
-  <ul class="one">
-    <template v-for="elem in arr">
-    <li v-if="elem > 0 ">{{ elem }}</li>
-    </template>
+<ul class='one'>
+  <div v-for="product in products" :key='products.id'>{{ prod.name }} </div>
   </ul>
 </template>
 
