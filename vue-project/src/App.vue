@@ -2,7 +2,7 @@
 export default{
 data(){
   return{
-    arr: ['x', 'y', 'z'],
+    obj: {User:'100$', User1:'200$', User2:'300$'},
   }
 },
 methods: {
@@ -11,7 +11,18 @@ methods: {
 </script>
 
 <template>
-  <ul class="one" v-for="(key, elem) in arr"> {{ key }} {{ elem }}</ul>
+  <ul class="one">
+    <li v-for="elem in obj">{{ elem }}</li>
+  </ul>
+  <ul class="one">
+    <li v-for="(key, elem) in obj"> {{ elem }} - {{ key }}</li>
+  </ul>
+  <ul class="one">
+    <li v-for="(key, elem, index) in obj"> {{ elem }} - {{ key }} - {{ index }}</li>
+  </ul>
+  <ul class="one">
+    <li v-for="(key, elem, index) in obj"> {{ elem }} - {{ key }} - {{ index+1 }}</li>
+  </ul>
 </template>
 
 <style scoped>
