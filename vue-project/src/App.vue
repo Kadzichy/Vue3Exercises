@@ -11,9 +11,9 @@ methods: {
 </script>
 
 <template>
-<p class="one" v-if="Age < 18">Подросток</p>
-<p class="one" v-else-if="19 < Age && age < 25">Молодой человек</p>
-<p class="one" v-else="Age > 26">Мужчина</p>
+<div class="one" v-if="Age < 18">Подросток</div>
+<div class="one" v-else-if="19 < Age && age < 25">Молодой человек</div>
+<div class="one" v-else="Age > 26">Мужчина</div>
 </template>
 
 <style scoped>
