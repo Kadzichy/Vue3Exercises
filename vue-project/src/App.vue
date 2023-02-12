@@ -2,15 +2,15 @@
 export default{
 data(){
   return{
-    hunters: ['Oleg', 'tinkoff'],
+    a: ['Oleg', 'tinkoff'],
   }
 },
 methods: {
 add: function(){
-  this.hunters.push('Oleg');
+  this.a.push('Oleg');
 },
 del: function(){
-  this.hunters.shift();
+  this.a.shift();
 },
 }
 }
@@ -18,7 +18,7 @@ del: function(){
 
 <template>
 <ul class="styled">
-  <li v-for="elem in hunters">{{ elem }}</li>
+  <li v-for="elem in a">{{ elem }}</li>
 </ul>
 <button class="button" @click="add">add</button>
 <br>
