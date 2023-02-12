@@ -2,31 +2,27 @@
 export default{
 data(){
   return{
-    products: [
-      {
-        id: 1,
-        name: 'product1',
-      },
-      {
-        id: 2,
-        name: 'product2',
-      },
-      {
-        id: 3,
-        name: 'product3',
-      },
-    ]
+    hunters: ['Oleg', 'tinkoff'],
   }
 },
 methods: {
+add: function(){
+  this.hunters.push('Oleg');
+},
+del: function(){
+  this.hunters.shift();
+},
 }
 }
 </script>
 
 <template>
-<ul class='one'>
-  <div v-for="product in products" :key='products.id'>{{ prod.name }} </div>
-  </ul>
+<ul class="styled">
+  <li v-for="elem in hunters">{{ elem }}</li>
+</ul>
+<button class="button" @click="add">add</button>
+<br>
+<button class="button" @click="del">delete</button>
 </template>
 
 <style scoped>
