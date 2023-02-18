@@ -2,7 +2,10 @@
 export default{
 data(){
   return{
-    cssClass: 'Oleg',
+    obj: {
+      done: true,
+      selected: false,
+    },
   }
 },
 methods: {
@@ -11,7 +14,8 @@ methods: {
 </script>
 
 <template>
-<p :class="cssClass">Oleg Tinkoff</p>
+<p :class="selected">Oleg</p>
+<p :class="obj">Tinkoff</p>
 </template>
 
 <style scoped>
