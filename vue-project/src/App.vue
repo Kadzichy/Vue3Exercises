@@ -2,23 +2,23 @@
 export default{
 data(){
   return{
-    two: ' ',
-    // Oleg: ' ',
+    checked: true,
+    visible: true,
   }
 },
 methods: {
-list: function(){
-  }
+  toggle: function () {
+    this.checked = false;
+    this.visible = !this.visible;
+  },
 }
 }
 </script>
 
 <template>
-<textarea class="text-field__input" v-model="two"></textarea>
-<p class="one">{{ two }}</p>
-<ul>
-  <li v-for="three in two">{{ three }}</li>
-</ul>
+<input class="text-field__input" type="checkbox" v-model="checked"> 
+<button class="button" @click="toggle">toggle</button>
+<div class="one" v-if="visible">{{ checked ? 'Oleg' : 'tinkoff' }}</div>
 </template>
 
 <style scoped>
