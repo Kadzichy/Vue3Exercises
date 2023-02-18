@@ -2,26 +2,41 @@
 export default{
 data(){
   return{
-    lang: [],
+    order: '',
+    visible: false,
+    visible1: false,
+    visible2: false,
   }
 },
 methods: {
+one(){
+      this.visible = true;
+},
+  two() {
+    this.visible1 = true;
+  },
+  three() {
+    this.visible2 = true;
+  }
 }
 }
 </script>
 
 <template>
 <div class="one">
-<input class="one" type="checkbox" v-model="lang" value="Oleg">
-<label>1</label>
+<p>Хто ты?</p>
+<input name="radio" type="radio" v-model="order" value="Хто я" @click="one">
+<label for="">?</label>
 <br>
-<input class="one" type="checkbox" v-model="lang" value="Tinkoff">
-<label>2</label>
-<ol>
-<li v-for="elem in lang">{{ elem }}</li>
-</ol>
+<input name="radio" type="radio" v-model="order" value="Розбiйнiк" @click="two">
+<label for="">?</label>
+<br>
+<input name="radio" type="radio" v-model="order" value="Выйди розбiйнiк" @click="three">
+<label for="">?</label>
 </div>
 
+<p> Ваш выбор: {{ order }}</p>
+<br>
 </template>
 
 <style scoped>
