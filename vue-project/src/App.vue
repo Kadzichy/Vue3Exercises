@@ -2,6 +2,8 @@
 export default{
 data(){
   return{
+message: '',
+number: '',
   }
 },
 methods: {
@@ -10,8 +12,11 @@ methods: {
 </script>
 
 <template>
-<p :style="{color: 'green', background: 'yellow'}">Oleg</p>
-<p :style="{fontWeight: 'bold', fontStyle: 'italic'}">Tinkoff</p>
+<input class="text-field__input" v-model="message">
+<p class="one" :style="{textTransform: 'uppercase'}">{{ message }}</p>
+<br>
+<input class="text-field__input" v-model="number">
+<p class="one">{{ number*number }}</p>
 </template>
 
 <style scoped>
