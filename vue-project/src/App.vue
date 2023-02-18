@@ -6,7 +6,6 @@ data(){
   }
 },
 methods: {
-  // vm.submit()
 }
 }
 </script>
@@ -19,3 +18,4 @@ methods: {
 
 <style scoped>
 </style>
+ 
