@@ -2,8 +2,6 @@
 export default{
 data(){
   return{
-    isValid: true,
-    isDisabled: true,
   }
 },
 methods: {
@@ -12,9 +10,9 @@ methods: {
 </script>
 
 <template>
-<p :class="{valid: isValid, disable: isDisabled}">Oleg</p>
+<p :style="{color: 'green', background: 'yellow'}">Oleg</p>
+<p :style="{fontWeight: 'bold', fontStyle: 'italic'}">Tinkoff</p>
 </template>
 
 <style scoped>
-p{color:red};
 </style>
