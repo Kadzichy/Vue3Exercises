@@ -2,25 +2,19 @@
 export default{
 data(){
   return{
-   
-    isDisabled1: true,
-    checked: false,
+  what: ' ',
   }
 },
 methods: {
- 
-  toggle1: function () {
-    this.isDisabled1 = false;
-  },
+  // vm.submit()
 }
 }
 </script>
 
 <template>
-
-<button class="button" @click="toggle">btn</button>
-<input type="text" class="one" placeholder="one" v-bind:disabled="isDisabled1">
-<input type="checkbox" v-model="checked" @click="toggle1">
+<input class="one" v-model="what" v-on:keyup.enter="submit">
+<p>{{ what }}</p>
+<a href="#" v-on:keyup.ctrl="sub">...</a>
 </template>
 
 <style scoped>
