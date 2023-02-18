@@ -19,10 +19,8 @@ methods: {
 <template>
 
 <button class="button" @click="toggle">btn</button>
-<input type="text" class="text-field__input" placeholder="one" v-bind:disabled="isDisabled1">
-<br>
+<input type="text" class="one" placeholder="one" v-bind:disabled="isDisabled1">
 <input type="checkbox" v-model="checked" @click="toggle1">
-<!-- <button class="button" @click="toggle">Button</button> -->
 </template>
 
 <style scoped>
