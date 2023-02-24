@@ -19,3 +19,4 @@ export default {
     <p class="One">{{ name }} {{ surn }}</p>
     <button class="button" @click="$emit('remove', id)"> remove </button>
 </template>
+ 
