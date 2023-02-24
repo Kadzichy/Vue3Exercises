@@ -2,27 +2,43 @@
 export default{
 data(){
   return{
-    newNumber: '',
-    Numbers: ['1', '2', '3', '4', '5'],
+    mens: [
+      {
+        id: 1,
+        name: 'Oleg Sverskiy',
+        salary: 100,
+        age: 15,
+      },
+      {
+        id: 2,
+        name: 'Oleg Gazmanov',
+        salary: 200,
+        age: 15,
+      },
+      {
+        id: 3,
+        name: 'Oleg Tinkoff',
+        salary: 300,
+        age: 16,
+      },
+    ],
   }
 },
 methods: {
-  RemoveNumber: function (index) {
-    this.Numbers.splice(index, 1);
+  removemen: function (id) {
+    this.mens = this.mens.filter((men) => {
+      return men.id !== id;
+    })
   }
 }
 }
 </script>
 
 <template>
-<ul class="styled">
-  <li v-for="(Number, index) in 
-			Numbers" :key="index">
-    {{ Number }}
-    <br>
-    <button class="button" @click="RemoveNumber(index)">Remove</button>
-  </li>
-</ul>
+<table class="one">
+  <tr v-for="men in mens" :key="men.id"> {{ men.name }} {{ men.salary }} {{ men.age }} <button class="button" @click="removemen(mens.id)">Remove</button>
+</tr>
+</table>
 </template>
 <style scoped>
 </style>
