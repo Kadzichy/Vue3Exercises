@@ -2,13 +2,13 @@
 export default{
 data(){
   return{
-    New: '',
-    anythings: ['1', '2', '3', '4'],
+    newNumber: '',
+    Numbers: ['1', '2', '3', '4', '5'],
   }
 },
 methods: {
-  Add: function () {
-    this.anythings.unshift(this.New);
+  RemoveNumber: function (index) {
+    this.Numbers.splice(index, 1);
   }
 }
 }
@@ -16,15 +16,13 @@ methods: {
 
 <template>
 <ul class="styled">
-  <li v-for="(anything, index) in 
-			anythings" :key="index">
-    {{ anything }}
+  <li v-for="(Number, index) in 
+			Numbers" :key="index">
+    {{ Number }}
+    <br>
+    <button class="button" @click="RemoveNumber(index)">Remove</button>
   </li>
 </ul>
-<input  v-model="New">
-<br>
-<button class="button" @click="Add">add</button>
 </template>
-
 <style scoped>
 </style>
