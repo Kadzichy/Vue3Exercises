@@ -1,12 +1,14 @@
 <script>
 import Oleg from './components/Employee.vue'
 export default {
-  components: { Oleg }
+  components: {
+    Oleg
+  }
 }
 </script>
 
 <template>
-<Oleg name="Oleg" surn="Tinkoff" age="0"/>
+<Oleg :name="['Oleg', 'Oleg', 'Oleg', 'Oleg']"/>
 </template>
 
 <style scoped>
