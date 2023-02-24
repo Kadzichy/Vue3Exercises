@@ -31,7 +31,7 @@ export default {
         return User.id !== id;
       })
     }
-  }
+  } 
 }
 </script>
 <template>
