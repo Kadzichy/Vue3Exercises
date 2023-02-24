@@ -5,40 +5,53 @@ data(){
     mens: [
       {
         id: 1,
-        name: 'Oleg Sverskiy',
+        name: 'Oleg tinkoff',
         salary: 100,
-        age: 15,
+        age: 10,
       },
       {
         id: 2,
-        name: 'Oleg Gazmanov',
+        name: 'Oleg tinkoff',
         salary: 200,
         age: 15,
       },
       {
         id: 3,
-        name: 'Oleg Tinkoff',
+        name: 'Oleg tinkoff',
         salary: 300,
         age: 16,
       },
-    ],
+    ]
   }
 },
 methods: {
-  removemen: function (id) {
-    this.mens = this.mens.filter((men) => {
-      return men.id !== id;
-    })
-  }
+  edit(men) {
+    men.isEdit = true;
+  },
+  save(men) {
+    men.isEdit = false;
+  },
 }
 }
-</script>
 
+</script>
 <template>
-<table class="one">
-  <tr v-for="men in mens" :key="men.id"> {{ men.name }} {{ men.salary }} {{ men.age }} <button class="button" @click="removemen(mens.id)">Remove</button>
+<table class="men">
+<tr v-for="men in mens" :key="men.id"> 
+<template v-if="!men.isEdit">
+  {{ men.name }} {{ men.salary }} {{ men.age }}<button class="button" @click="edit(men)">edit</button>
+</template>
+<template v-else>
+  <input v-model="men.name">
+  <input v-model="men.salary">
+  <input v-model="men.age">
+  <button class="button" @click="save(men)">
+      save
+  </button>
+</template>
 </tr>
 </table>
 </template>
+
 <style scoped>
 </style>
