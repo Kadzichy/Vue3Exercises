@@ -6,7 +6,7 @@ export default {
 </script>
 
 <template>
-<Oleg />
+<Oleg name="Oleg" surn="Tinkoff" age="0"/>
 </template>
 
 <style scoped>
