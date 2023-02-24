@@ -1,22 +1,24 @@
 <script>
 export default {
-    props: {
-        id: Number,
-        name: String,
-        surn: String,
-    },
-    emits: ['remove'],
     data() {
         return {
+            newName: ' ',
+            newSurn: ' ',
         }
     },
     methods: {
+        save(){
+            this.$emit('add', this.newName, this.newSurn)
+        }
     }
 }
 </script>
 
 <template>
-    <p class="One">{{ name }} {{ surn }}</p>
-    <button class="button" @click="$emit('remove', id)"> remove </button>
+    <input class="text-field__input" v-model="newName">
+    <br>
+    <br>
+    <input class="text-field__input" v-model="newSurn">
+    <br>
+    <button class="button" @click="save">save</button>
 </template>
- 
