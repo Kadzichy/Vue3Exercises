@@ -1,34 +1,29 @@
 <script>
-import User from './components/Employee.vue'
+import Oleg from './components/Employee.vue'
 export default {
   data() {
     return {
-      users: [
-        {
-          id: 1,
-          name: 'Oleg',
-          salary: 1000,
-          age: 18
-        },
-        {
-          id: 2,
-          name: 'Oleg',
-          salary: 2000,
-          age: 15
-        },
-      ],
+      
     }
   },
   components: {
-    User
+    Oleg
+  },
+  methods: {
+    Oleg() {
+      alert('1, 2, 3, 4');
+    },
+    tinkoff(){
+      alert('1, 2, 3, 4')
+    }
   }
 }
 </script>
 
 <template>
-<User v-for="User in users" :name="User.name" :salary="User.salary" :age="User.age" :key="User.id" />
+<Oleg @show="Oleg" @show1="Tinkoff" />
 </template>
 
 
 <style scoped>
-</style> 
+</style>
