@@ -1,17 +1,22 @@
 <script>
 export default {
-    props: ['name', 'surn', 'salary'],
+    emits: ['show', 'show1'],
     data() {
         return {
         }
+    },
+    methods: {
+        handle() {
+            this.$emit('show');
+        },
+        handle1() {
+            this.$emit('show1');
+        },
     }
 }
 </script>
 
 <template>
-<p class="one">
-{{ name }} 
-{{ surn }}
-{{ salary }} 
-</p>
+<button class="button" @click="handle">Oleg</button>
+<button class="button" @click="handle1">Tinkoff</button>
 </template>
